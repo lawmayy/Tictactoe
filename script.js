@@ -35,7 +35,14 @@ function turnClick(square){
         // console.log(checkTie())
 
         // AI's turn
-        if (!checkTie()) turn(bestSpot(), aiPlayer);
+        if (!checkTie()) {
+
+            // Added 0.5s delay
+            setTimeout(function(){
+                turn(bestSpot(), aiPlayer)
+            }, 500); 
+            
+        };
     }
 }
 
